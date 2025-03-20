@@ -87,18 +87,70 @@ if(idade >= 17){
     switch(instituicao){
         case "CEM10" : 
          log("Escola");
-        case"CIL";
+        case "CIL":
          log("Escola de Línguas");  
             break;
-        case"CEUB";
+        case"CEUB":
          log("FACULDADE");
          break;
-         default;
+         default:
          log("Não é Instituição");
 
     }
 
     for(let loop = 0; loop < 5; loop++  ) {
-        log(`Meu valor no loop: ${loop}´);
+        log(`Meu valor no loop: ${loop}`);
     } 
 
+    let valorWhile = 0;
+    while (valorWhile < 5) {
+        log(`Meu valor no loop: ${valorWhile}`);
+      valorWhile++;      
+    }
+async function buscarDados() {
+    return new Promise(resolve  => {
+        setTimeout( () => resolve("Dados Recebidos") ,4*1000)
+
+        });
+}
+async function executarBusca() {
+    log("Buscando...");
+
+    let resultado = await buscarDados();
+
+    log (resultado);
+}
+
+executarBusca();    
+
+const meuMetodo = function exemploMetodo() {
+    log ("Executei por metodo normal");
+
+};
+
+log(meuMetodo);
+const objTeste = {
+    eai(){
+        log("EAI");
+    },
+    tchau() {
+        log("TCHAU");
+      },
+    };
+
+objTeste.eai();
+objTeste.tchau();
+
+//Manipulação do DOM
+//Aqui criamos um elemento dinamicamente e o adicionamos ao corpo da página
+document.addEventListener("DOMContentLoaded", () => {
+  let titulo = document.createElement("h2");
+  titulo.innerText = "EAI DOM";
+  document.body.appendChild(titulo);
+
+});
+
+function toggleImagem(){
+    let img = document.getElementById("minhaImagem");
+    img.style.display = img.style.display === "none" ? "block"
+}
