@@ -150,7 +150,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-function toggleImagem(){
+function toggleImagem() {
     let img = document.getElementById("minhaImagem");
-    img.style.display = img.style.display === "none" ? "block"
+    img.style.display = img.style.display === "none" ? "block" :"none"
+  }
+  function mostrarValorCombo() {
+    let combo = document.getElementById("meu combo");
+    alert("Valor selecionado:" + combo.value);
+  }
+
+
+    function mostrarValorRadio() {
+        let radios = document.getElementsByName("tamanho");
+        
+    for(let radio of radios){
+        if(radio.checked){
+            alert("Opçao selecionada:" + radio.value);
+            break;
+        }
+    }
+    
+  }
+  function mostrarValorCheckbox() {
+    let checkboxs = document.getElementsByName("interesse");
+    let selecionados = [];
+
+    for(let checkbox of checkboxs) {
+        if(checkbox.checked){
+        selecionados.push(checkbox.value);
+         }
+    }
+    alert(
+        "Seleciondos:" + 
+        (selecionados.length > 0 ? selecionados.join(" ,") :"Nenhum")
+     );
 }
+
+
+
