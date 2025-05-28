@@ -1,7 +1,7 @@
 <template>
     <div>
         <footer id="footer">
-            <p>Ben Vindo: {{ nome }} Olá mundo do <b>Vue com CLI</b> </p>
+            <p>Dono da Empresa: {{ nome }} Olá rapaziada <b>Vue com CLI</b> </p>
         </footer>
     </div>
 </template>
@@ -11,7 +11,7 @@
     name : "HomeComponent",
     data() {
         return {
-            nome : "Fernando"
+            nome : "Calebe Alves"
         }
     }
   }

@@ -1,8 +1,8 @@
 const meuAppVue = {
   data() {
     return {
-      nome: "Fernando Dias",
-      idade: 39,
+      nome: "Calebe Alves",
+      idade: 22,
       inputText: "",
     };
   },
